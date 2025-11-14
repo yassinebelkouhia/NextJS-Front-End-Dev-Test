@@ -13,10 +13,26 @@
     $secondary-blue 100%
   );
 
+  @include tablet {
+    height: fit-content;
+  }
+
+  @include tablet {
+    height: fit-content;
+  }
+
   .footerData {
     display: flex;
     justify-content: space-between;
     align-items: start;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
 
     .logo {
       @include flex-column;
@@ -36,6 +52,13 @@
       width: 30%;
       color: $text-light;
       font-size: 1.7rem;
+      @include tablet {
+        width: 90%;
+      }
+
+      @include tablet {
+        width: 90%;
+      }
     }
 
     .siteMap {
