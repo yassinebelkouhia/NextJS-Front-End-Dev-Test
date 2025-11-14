@@ -2,9 +2,7 @@
 @import "@/styles/mixins.scss";
 
 .contactSection {
-  background: linear-gradient(to right, $light-gray 50%, $secondary-blue 50%);
   padding: $spacing-xl $spacing-xl;
-  //   position: relative;
 
   @include tablet {
     background: $light-gray;
@@ -34,11 +32,11 @@
 // ========================================
 
 .contactInfo {
-  //   padding-right: $spacing-lg;
+  // padding-right: $spacing-lg;
+  padding: 6rem;
 
   @include tablet {
-    padding-right: 0;
-    padding-bottom: $spacing-lg;
+    padding: 2rem;
   }
 }
 
@@ -63,8 +61,14 @@
   }
 }
 
+.infoContainer {
+  @include flex-between;
+}
+
 .infoBlock {
   margin-bottom: $spacing-lg;
+  width: 20rem;
+  @include flex-column;
 
   h3 {
     font-size: 2.5rem;
@@ -79,14 +83,14 @@
     font-style: normal;
     color: $text-light;
     line-height: 1.8;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   a {
     color: $text-light;
     margin-bottom: $spacing-xs;
     transition: color $transition-fast;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
     &:hover {
       color: $accent-blue;
@@ -97,7 +101,7 @@
   p {
     color: $text-light;
     margin-bottom: $spacing-xs;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -142,7 +146,7 @@
 }
 
 .formCard {
-  //   background: $secondary-blue;
+  background: $secondary-blue;
   padding: $spacing-2xl $spacing-xl;
   border-radius: 12px;
   width: 100%;
@@ -158,10 +162,11 @@
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
+    text-align: center;
     color: $white;
     margin-bottom: $spacing-sm;
-    font-weight: 700;
+    font-weight: 200;
 
     @include mobile {
       font-size: 1.75rem;
@@ -173,6 +178,7 @@
   color: rgba($white, 0.8);
   margin-bottom: $spacing-lg;
   font-size: 2rem;
+  text-align: center;
   line-height: 1.6;
 }
 
@@ -206,6 +212,8 @@
 
     &::placeholder {
       color: rgba($white, 0.5);
+      font-size: 2rem;
+      font-weight: 200;
     }
 
     &:focus {
