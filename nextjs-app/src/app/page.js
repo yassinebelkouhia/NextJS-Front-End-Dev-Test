@@ -20,10 +20,30 @@ export default function Home() {
       <ServiceCard
         title="Cargo"
         description="We handle urgent and sensitive air cargo operations, including
-high-value freight, humanitarian aid, and time-critical
-shipments. Our team manages routing, compliance, and secure
-handling from start to finish."
+        high-value freight, humanitarian aid, and time-critical
+        shipments. Our team manages routing, compliance, and secure
+        handling from start to finish."
         serviceImage="/service2.jpg"
+        isReversed={true}
+      />
+      <ServiceCard
+        title="Medevac"
+        description="From ICU-equipped aircraft to ground coordination, we manage
+        medical evacuations and repatriations with speed, discretion,
+        and clinical oversight."
+        serviceImage="/service3.jpg"
+        isReversed={false}
+      />
+      <ServiceCard
+        title={
+          <>
+            War <br /> Zones
+          </>
+        }
+        description="We organize rapid evacuations from high-risk
+        regions and conflict zones, coordinating aircraft, security,
+        and diplomatic clearances under pressure."
+        serviceImage="/service4.jpg"
         isReversed={true}
       />
       <ContactForm />
