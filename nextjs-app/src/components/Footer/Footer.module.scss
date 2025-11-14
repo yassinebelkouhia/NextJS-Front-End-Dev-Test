@@ -1,0 +1,64 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  height: 40vh;
+  padding: 4rem 5rem;
+  background: linear-gradient(
+    45deg,
+    $primary-blue 0%,
+    $secondary-blue 50%,
+    $accent-blue 100%
+  );
+
+  .logo {
+    @include flex-column;
+    @include flex-center;
+
+    h3 {
+      font-size: 3rem;
+      color: $white;
+      font-weight: 200;
+      line-height: 2.5rem;
+      text-align: center;
+    }
+  }
+
+  .copy {
+    width: 30%;
+    color: $text-light;
+    font-size: 1.7rem;
+  }
+
+  .siteMap {
+    @include flex-column;
+    gap: 0.5rem;
+
+    h3 {
+      font-size: 2.5rem;
+      color: $white;
+      font-weight: 200;
+    }
+
+    a {
+      font-size: 2rem;
+      color: $text-light;
+    }
+  }
+
+  .office {
+    @include flex-column;
+    gap: 0.5rem;
+    font-size: 2rem;
+    color: $text-light;
+
+    h3 {
+      font-size: 2.5rem;
+      color: $white;
+      font-weight: 200;
+    }
+  }
+}

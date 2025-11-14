@@ -1,0 +1,65 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.content {
+  @include container;
+  @include flex-center;
+
+  .serviceDataAndCta {
+    width: 50%;
+    position: relative;
+    @include flex-between;
+    @include flex-column;
+    @include flex-center;
+    margin: 15rem auto;
+    gap: 2.5rem;
+
+    h2 {
+      text-align: center;
+      font-size: 10rem;
+      font-weight: 200;
+      line-height: 8rem;
+      color: $primary-blue;
+    }
+
+    p {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 200;
+      line-height: 2.5rem;
+      width: 70%;
+      margin: auto;
+      color: $text-light;
+    }
+
+    button {
+      background-color: $secondary-blue;
+      color: $white;
+      padding: 1.3rem 2rem;
+      font-size: 2.1rem;
+      border-radius: 0.5rem;
+    }
+
+    .serviceImage {
+      position: absolute;
+      top: 20;
+      left: 0;
+      border-radius: 2rem;
+      transform: translateX(-10rem) rotate(-6deg);
+    }
+    .servicePlain {
+      position: absolute;
+      top: 20;
+      right: -20;
+      transform: translateX(20rem) rotate(5deg);
+    }
+  }
+}
+
+.reversed {
+  background-color: $primary-blue;
+}
+
+.reversedTitle {
+  color: $white;
+}

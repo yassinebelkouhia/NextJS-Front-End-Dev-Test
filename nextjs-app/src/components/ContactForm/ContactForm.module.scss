@@ -1,0 +1,372 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.contactSection {
+  background: linear-gradient(to right, $light-gray 50%, $secondary-blue 50%);
+  padding: $spacing-xl $spacing-xl;
+  //   position: relative;
+
+  @include tablet {
+    background: $light-gray;
+    padding: $spacing-lg 0;
+  }
+
+  @include mobile {
+    padding: $spacing-md 0;
+  }
+}
+
+.container {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-xl;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+// ========================================
+// LEFT SIDE - CONTACT INFO
+// ========================================
+
+.contactInfo {
+  //   padding-right: $spacing-lg;
+
+  @include tablet {
+    padding-right: 0;
+    padding-bottom: $spacing-lg;
+  }
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: $accent-blue;
+  letter-spacing: 1.3px;
+  margin-bottom: $spacing-sm;
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 200;
+  line-height: 5rem;
+  margin-bottom: $spacing-lg;
+  color: $text-dark;
+
+  @include mobile {
+    font-size: 2rem;
+    margin-bottom: $spacing-md;
+  }
+}
+
+.infoBlock {
+  margin-bottom: $spacing-lg;
+
+  h3 {
+    font-size: 2.5rem;
+    color: $accent-blue;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+    margin-bottom: $spacing-sm;
+    text-transform: uppercase;
+  }
+
+  address {
+    font-style: normal;
+    color: $text-light;
+    line-height: 1.8;
+    font-size: 2rem;
+  }
+
+  a {
+    color: $text-light;
+    margin-bottom: $spacing-xs;
+    transition: color $transition-fast;
+    font-size: 2rem;
+
+    &:hover {
+      color: $accent-blue;
+      opacity: 1;
+    }
+  }
+
+  p {
+    color: $text-light;
+    margin-bottom: $spacing-xs;
+    font-size: 2rem;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  gap: $spacing-sm;
+  margin-top: $spacing-md;
+
+  a {
+    width: 50px;
+    height: 50px;
+    background: $white;
+    border-radius: 8px;
+    @include flex-center;
+    color: $text-dark;
+    transition: all $transition-medium;
+    display: inline-flex;
+    box-shadow: 0 2px 8px rgba($primary-blue, 0.1);
+
+    &:hover {
+      background: $accent-blue;
+      color: $white;
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba($accent-blue, 0.3);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+// ========================================
+// RIGHT SIDE - FORM
+// ========================================
+
+.formWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formCard {
+  //   background: $secondary-blue;
+  padding: $spacing-2xl $spacing-xl;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 20px 60px rgba($primary-blue, 0.3);
+
+  @include tablet {
+    max-width: 100%;
+  }
+
+  @include mobile {
+    padding: $spacing-lg $spacing-md;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    color: $white;
+    margin-bottom: $spacing-sm;
+    font-weight: 700;
+
+    @include mobile {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.formSubtitle {
+  color: rgba($white, 0.8);
+  margin-bottom: $spacing-lg;
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    color: $white;
+    font-size: 1.5rem;
+    margin-bottom: $spacing-xs;
+    font-weight: 200;
+  }
+
+  input,
+  textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba($white, 0.3);
+    color: $white;
+    padding: $spacing-sm 0;
+    font-size: 1rem;
+    font-family: $font-primary;
+    transition: border-color $transition-medium;
+
+    &::placeholder {
+      color: rgba($white, 0.5);
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom-color: $white;
+    }
+
+    &:hover {
+      border-bottom-color: rgba($white, 0.5);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+    padding-top: $spacing-sm;
+  }
+}
+
+.captcha {
+  margin: $spacing-md 0;
+}
+
+.captchaBox {
+  background: $white;
+  padding: $spacing-md;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  box-shadow: 0 2px 8px rgba($primary-blue, 0.15);
+
+  input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    accent-color: $accent-blue;
+  }
+
+  label {
+    color: $text-dark;
+    cursor: pointer;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+}
+
+.captchaNote {
+  font-size: 0.75rem;
+  color: rgba($white, 0.6);
+  margin-top: $spacing-xs;
+  text-align: right;
+}
+
+// ========================================
+// SUBMIT BUTTON
+// ========================================
+
+.submitBtn {
+  background: $white;
+  color: $secondary-blue;
+  padding: $spacing-md $spacing-lg;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all $transition-medium;
+  border: 2px solid $white;
+  margin-top: $spacing-sm;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  &:hover:not(:disabled) {
+    background: transparent;
+    color: $white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba($white, 0.2);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+// ========================================
+// STATUS MESSAGES
+// ========================================
+
+.successMessage,
+.errorMessage {
+  padding: $spacing-md;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.875rem;
+  margin-top: $spacing-md;
+  font-weight: 500;
+  animation: slideIn $transition-medium ease-out;
+}
+
+.successMessage {
+  background: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
+.errorMessage {
+  background: rgba(244, 67, 54, 0.15);
+  color: #f44336;
+  border: 1px solid rgba(244, 67, 54, 0.5);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ========================================
+// RESPONSIVE ADJUSTMENTS
+// ========================================
+
+@include tablet {
+  .contactSection {
+    background: $light-gray;
+  }
+
+  .formCard {
+    background: $secondary-blue;
+  }
+}
+
+@include mobile {
+  .title {
+    br {
+      display: none;
+    }
+  }
+
+  .formCard {
+    padding: $spacing-md;
+  }
+
+  .form {
+    gap: $spacing-sm;
+  }
+
+  .formGroup {
+    input,
+    textarea {
+      font-size: 0.95rem;
+    }
+  }
+}
